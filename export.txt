@@ -1,0 +1,11 @@
+Export Date: 12/7/2025, 5:38:55 PM
+Total Records: 6
+File: export.txt
+
+--------------------------------------------------
+ID: 1765101908686 | Name: Zara Updated | Value: Lead Developer | Created: 2025-12-07
+ID: 1765101908719 | Name: Ali | Value: Manager | Created: 2025-12-07
+ID: 1765101908724 | Name: Bilal | Value: Intern | Created: 2025-12-07
+ID: 1765110772378 | Name: Ali | Value: 5 | Created: 2025-12-07
+ID: 1765110782951 | Name: Alina | Value: 10 | Created: 2025-12-07
+ID: 1765110796648 | Name: Adeel  | Value: 15 | Created: 2025-12-07
