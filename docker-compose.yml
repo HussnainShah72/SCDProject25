@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  # Service 1: MongoDB Database
+  database:
+    image: mongo:latest
+    container_name: mongo-db
+    networks:
+      - app-network
+    volumes:
+      - mongo-data:/data/db
+  # Service 2: Node.js Backend
+  backend:
+    # Use the image you pushed to Docker Hub
+    build:
+      context: .
+      network: host
+    container_name: nodevault-app
+    depends_on:
+      - database
+    networks:
+      - app-network
+    # Load environment variables from .env file
+    env_file:
+      - .env
+    # Override the URI to point to the service name 'database' via environment variable
+    environment:
+      - MONGO_URI=mongodb://mongo-db:27017/nodevault
+    stdin_open: true # Equivalent to -i
+    tty: true        # Equivalent to -t
+# Define the Custom Network
+networks:
+  app-network:
+    driver: bridge
+# Define the Persistent Volume
+volumes:
+  mongo-data:
